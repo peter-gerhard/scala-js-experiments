@@ -1,7 +1,7 @@
 enablePlugins(ScalaJSPlugin)
 
 name := "scala js experiments"
-scalaVersion := "2.11.12" // or any other Scala version >= 2.10.2
+scalaVersion := "2.12.4" // or any other Scala version >= 2.10.2
 
 // This is an application with a main method
 scalaJSUseMainModuleInitializer := true

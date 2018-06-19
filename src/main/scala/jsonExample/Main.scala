@@ -2,9 +2,10 @@ package jsonExample
 
 object Main {
 
+  // tested with 2.4
   def main(args: Array[String]): Unit = {
-//    parseTest.run
-    decoderEncoderTest.run
+    parseTest.run()
+    decoderEncoderTest.run()
   }
 
   object decoderEncoderTest {
@@ -20,7 +21,7 @@ object Main {
       implicit val userEncoder: Encoder[User] = deriveEncoder
     }
 
-    def run: Unit = {
+    def run(): Unit = {
       val json =
         """{
           |  "username": "Henriette.Hand29",
@@ -46,7 +47,7 @@ object Main {
       }
       """
 
-    def run: Unit = parse(rawJson) match {
+    def run(): Unit = parse(rawJson) match {
       case Left(failure) => println("Invalid JSON :(")
       case Right(json) => println("Yay, got some JSON!")
     }
